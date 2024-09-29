@@ -4,22 +4,20 @@
 
 ## Overview
 
-Welcome to **PROJECT INSIGHT**! This project focuses on [briefly describe the main goals and functionalities of the project].
+Welcome to **PROJECT INSIGHT**! This project is the ***Class 12 Final Parctical Project***.
 
 ## Features
 
 - User account creation and management
 - Emergency notifications system
 - Hospital notifications system
-- User dashboard with [additional features]
-- Integration with Python, HTML, CSS
 
 ## Technologies Used
 
-- Python (Flask)
+- Python (Backend)
 - HTML, CSS (Frontend)
-- [Database] for user data storage
-- [HERE Maps API] (if applicable)
+- SQlite3 for user data storage
+- HERE Maps API
 
 ## Installation
 
@@ -55,4 +53,3 @@ Welcome to **PROJECT INSIGHT**! This project focuses on [briefly describe the ma
 http://127.0.0.1:5000
 http://localhost:5000
 ```
-
