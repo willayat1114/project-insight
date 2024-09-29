@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Project Insight - Hospital Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/styles.min.css') }}">
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-expand-lg fixed-top bg-dark navbar-dark" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="/">Project Insight</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto text-uppercase">
+                    <li class="nav-item"><a class="nav-link" href="/#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#contact">Contact us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/signup">Sign up</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/signup+hospital">Medical Institution</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="position-relative py-4 py-xl-5" style="margin-top: 80px;">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col">
+                    <h2>Hospital Dashboard</h2>
+                    <p class="lead">View all emergencies in a tabular form.</p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12">
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Patient Name</th>
+                                        <th scope="col">Weight</th>
+                                        <th scope="col">Height</th>
+                                        <th scope="col">Age</th>
+                                        <th scope="col">Medical History</th>
+                                        <th scope="col">Allergies</th>
+                                        <th scope="col">Location</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for emergency in emergencies %}
+                                    <tr>
+                                        <th scope="row">{{ emergency.id }}</th>
+                                        <td>{{ emergency.username }}</td>
+                                        <td>{{ emergency.weight }}</td>
+                                        <td>{{ emergency.height }}</td>
+                                        <td>{{ emergency.age }}</td>
+                                        <td>{{ emergency.medical_history }}</td>
+                                        <td>{{ emergency.alergies }}</td>
+                                        <td>{{ emergency.location }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/script.min.js') }}"></script>
+</body>
+</html>
