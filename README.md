@@ -33,12 +33,12 @@ Welcome to **PROJECT INSIGHT**! This project is the ***Class 12 Final Parctical 
    
 3. **Run the `pipcommands.bat` file**
 
-   To install the required dependencies, simply run the `pipcommands.bat` file:
+   To install the required dependencies, simply run the [pipcommands.bat](https://github.com/willayat1114/project-insight/blob/main/pipcommands.bat) file:
    ```bash
    pipcommands.bat
 
 4.**Run the `app.py` file**
-  After the restart, run the `app.py` file to start the application
+  After the restart, run the [app.py](https://github.com/willayat1114/project-insight/blob/main/app.py) file to start the application
   ```bash
   app.py
 ```
